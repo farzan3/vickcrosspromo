@@ -5,7 +5,7 @@ const port = process.env.PORT || 3000;
 app.get('/scrape/:id', function(req, res){
  
   var id = req.params.id;
-  url = 'http://splashstudio.org/appInfoApi.php?packageName='+id;
+  url = 'http://mishnat.com/mishnat/appInfoApi.php?packageName='+id;
 
   request({ url: url,json: true}, function(error, response, body){
     if(!error){
@@ -30,7 +30,7 @@ app.get('/scrape/:id', function(req, res){
 app.get('/selfPromo/:id', function(req, res){
  
   var id = req.params.id;
-  url = 'http://splashstudio.org/appIconInfo.php?packageName='+id;
+  url = 'http://mishnat.com/mishnat/appIconInfo.php?packageName='+id;
 
   request({ url: url,json: true}, function(error, response, body){
     if(!error){
@@ -55,7 +55,7 @@ app.get('/selfPromo/:id', function(req, res){
 app.get('/inapp/:id', function(req, res){
  
   var id = req.params.id;
-  url = 'http://business.splashstudio.org/appInfoApi_3.php?packageName='+id;
+  url = 'http://mishnat.com/mishnat/appInfoApi_3.php?packageName='+id;
 
   request({ url: url,json: true}, function(error, response, body){
     if(!error){
